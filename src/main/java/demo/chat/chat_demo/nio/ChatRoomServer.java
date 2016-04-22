@@ -46,8 +46,8 @@ public class ChatRoomServer {
         server.configureBlocking(false);
         //注册到选择器上，设置为监听状态
         server.register(selector, SelectionKey.OP_ACCEPT);
-        System.out.println("Server is listening now...");
-        
+        System.out.println("Server  is   listening now...  ");
+        //
         while(true) {
             int readyChannels = selector.select();
             if(readyChannels == 0) continue; 
