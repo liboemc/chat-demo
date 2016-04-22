@@ -42,7 +42,7 @@ public class ChatRoomServer {
         selector = Selector.open();
         ServerSocketChannel server = ServerSocketChannel.open();
         server.bind(new InetSocketAddress(port));
-        //非阻塞的方式
+       // //非阻塞的方式
         server.configureBlocking(false);
         //注册到选择器上，设置为监听状态
         server.register(selector, SelectionKey.OP_ACCEPT);
